@@ -1,5 +1,5 @@
 // 2 задание cделал
-
+/*
 class Cars {
     constructor(carModel, year, enginePower, color) {
         this.carModel = carModel;
@@ -41,17 +41,18 @@ const Tesla = new ElectroCars("Tesla", "2020", "450", "white", "85");
 console.log(BMW.showInfo());
 console.log(Tesla.showInfo());
 console.log(Tesla.promote());
-
+*/
 
 
 
 
 // 1 задание не сделал
-/*
+
 class Restaurant {
     constructor(name, cuisineType) {
         this.name = name;
         this.cuisineType = cuisineType;
+        this.served = 0;
     }
 
     showInfo() {
@@ -74,7 +75,15 @@ class Restaurant {
     }
 
     serve() {
+        return (this.served += 1);
+    }
 
+    setServed(num) {
+        return (this.served += num);
+    }
+
+    showTotalServed() {
+        return `Show total served: ${this.served}`;
     }
 }
 
@@ -84,7 +93,13 @@ const beshBarmak = new Restaurant("Besh Barmak", "kyrgyz");
 console.log(beshBarmak.showInfo());
 console.log(beshBarmak.isOpen());
 //console.log(vasya.showInfo());
-*/
+
+console.log(beshBarmak.serve());
+console.log(beshBarmak.serve());
+console.log(beshBarmak.serve());
+console.log(beshBarmak.serve());
+console.log(beshBarmak.setServed(20));
+console.log(beshBarmak.showTotalServed());
 
 
 
